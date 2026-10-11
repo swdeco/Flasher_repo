@@ -12,7 +12,13 @@ Usage (run from the Flasher_repo folder):
   python tools/release.py firmware "<Model>" display|mainboard <version> <firmware.bin>
   python tools/release.py config "<Model>" "<config name>" <config.json> [--default] [--force]
   python tools/release.py note   "<Model>" "<text>"               (empty text removes the note)
+  python tools/release.py remove-config "<Model>" "<config name>"   take a config out of the list
+  python tools/release.py remove-model  "<Model>"                   take a model out of the tool's list
+  python tools/release.py order  "<Model>" "<Model>" ...            order of the models in the tool
   python tools/release.py check                                   verify every entry against the files
+
+remove-* only take entries out of manifest.json; the files stay (once pushed,
+published files must never change or disappear - field PCs may have them cached).
 
 Boot keys: "partitions", "boot_app0", and bootloaders (any other key) such as
 "esp32-dio-40m", "esp32-dio-80m", "esp32s3-dio-80m".
@@ -294,6 +300,34 @@ def cmd_note(m, a):
     save(m)
 
 
+def cmd_remove_config(m, a):
+    e = model_entry(m, a.model)
+    keep = [c for c in e["configs"] if c["name"] != a.name]
+    if len(keep) == len(e["configs"]):
+        die(f"{a.model!r} has no config named {a.name!r}")
+    was_default = any(c.get("default") for c in e["configs"] if c["name"] == a.name)
+    e["configs"] = keep
+    if was_default and keep:
+        print(f"note: the default config was removed - set a new one with: config ... --default")
+    save(m)
+
+
+def cmd_remove_model(m, a):
+    model_entry(m, a.model)
+    del m["models"][a.model]
+    save(m)
+
+
+def cmd_order(m, a):
+    names = list(a.models)
+    missing = [n for n in names if n not in m["models"]]
+    if missing:
+        die(f"unknown model(s): {missing}")
+    rest = [n for n in m["models"] if n not in names]
+    m["models"] = {n: m["models"][n] for n in names + rest}
+    save(m)
+
+
 def cmd_check(m, a):
     problems = 0
 
@@ -383,11 +417,15 @@ def main():
     s = sub.add_parser("config"); s.add_argument("model"); s.add_argument("name"); s.add_argument("file")
     s.add_argument("--default", action="store_true"); s.add_argument("--force", action="store_true")
     s = sub.add_parser("note"); s.add_argument("model"); s.add_argument("text")
+    s = sub.add_parser("remove-config"); s.add_argument("model"); s.add_argument("name")
+    s = sub.add_parser("remove-model"); s.add_argument("model")
+    s = sub.add_parser("order"); s.add_argument("models", nargs="+")
     sub.add_parser("check")
     a = p.parse_args()
     m = load()
     {"boot": cmd_boot, "model": cmd_model, "firmware": cmd_firmware, "config": cmd_config,
-     "note": cmd_note, "check": cmd_check}[a.cmd](m, a)
+     "note": cmd_note, "remove-config": cmd_remove_config, "remove-model": cmd_remove_model,
+     "order": cmd_order, "check": cmd_check}[a.cmd](m, a)
 
 
 if __name__ == "__main__":

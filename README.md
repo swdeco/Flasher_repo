@@ -10,6 +10,19 @@ no MQTT/WiFi credentials.
 
 The phone app's OTA updates use the separate `swdeco/firmwares` repo - nothing here affects it.
 
+## What is in the tool
+
+| Model (exact `fireplaceModel`) | Display | Mainboard | config.json templates |
+|---|---|---|---|
+| Logicwood | 80 MHz bootloader | S3 | - (firmware only for now) |
+| Denver F2 | 80 MHz bootloader | S3 | - (firmware only for now) |
+| Rais Visio | 40 MHz bootloader | S3 | `visio 4-9-2026` (default), `Standard 2026-09-06` |
+| Rais CVNQ | 40 MHz bootloader | S3 | `Standard` (default), `Swiss (CH) - reduced output` |
+
+The model order in the tool = the order in manifest.json (`release.py order ...`).
+When the tool writes a config it always keeps the board's Bluetooth code (`serialNumber`),
+so the code in a template only matters for brand-new boards.
+
 ## Layout
 
 ```

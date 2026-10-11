@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-01",
+  "updated": "2026-10-10",
   "boot": {
     "esp32-dio-40m": {
       "file": "boot/esp32-bootloader-dio-40m-8MB.bin",
@@ -34,6 +34,50 @@
     }
   },
   "models": {
+    "Logicwood": {
+      "slug": "logicwood",
+      "bootloaders": {
+        "display": "esp32-dio-80m",
+        "mainboard": "esp32s3-dio-80m"
+      },
+      "configs": [],
+      "display": {
+        "version": "4.3.2",
+        "file": "models/logicwood/display/logicwood-display-4.3.2.bin",
+        "size": 2603840,
+        "crc32": "2df385d3",
+        "md5": "2b848bf4c0aa6a697203e4733843cd20"
+      },
+      "mainboard": {
+        "version": "0.6.2",
+        "file": "models/logicwood/mainboard/logicwood-mainboard-0.6.2.bin",
+        "size": 1218560,
+        "crc32": "5a40d0d8",
+        "md5": "4b5b719f47ed59cd3e82dd178d2f0736"
+      }
+    },
+    "Denver F2": {
+      "slug": "denver-f2",
+      "bootloaders": {
+        "display": "esp32-dio-80m",
+        "mainboard": "esp32s3-dio-80m"
+      },
+      "configs": [],
+      "display": {
+        "version": "4.1.1",
+        "file": "models/denver-f2/display/denver-f2-display-4.1.1.bin",
+        "size": 2406416,
+        "crc32": "54c080b9",
+        "md5": "971e52a232ac70bf4ab962dedaf90ee3"
+      },
+      "mainboard": {
+        "version": "0.4.1",
+        "file": "models/denver-f2/mainboard/denver-f2-mainboard-0.4.1.bin",
+        "size": 1212576,
+        "crc32": "3e2eb022",
+        "md5": "c07fee0ed2d195b1ca42ac7733f48e53"
+      }
+    },
     "Rais Visio": {
       "slug": "rais-visio",
       "bootloaders": {
@@ -86,6 +130,13 @@
           "crc32": "07271f0f",
           "md5": "61af9a187c4cbd47be771c3bed88ebc5",
           "default": true
+        },
+        {
+          "name": "Swiss (CH) - reduced output",
+          "file": "models/rais-cvnq/config/rais-cvnq-config-swiss-ch-reduced-output.json",
+          "size": 2876,
+          "crc32": "a357b521",
+          "md5": "d513acae775a0d505d057cc1a4d4b0da"
         }
       ],
       "note": "Mainboard firmware drives the bio relay on GPIO19. Do NOT use on 'old Rais' mainboards (relay on GPIO21).",
@@ -102,99 +153,6 @@
         "size": 1213744,
         "crc32": "fec9ee05",
         "md5": "ea8fd764618c0df811af3b0c6ea71017"
-      }
-    },
-    "Logicwood": {
-      "slug": "logicwood",
-      "bootloaders": {
-        "display": "esp32-dio-80m",
-        "mainboard": "esp32s3-dio-80m"
-      },
-      "configs": [
-        {
-          "name": "Standard",
-          "file": "models/logicwood/config/logicwood-config-standard.json",
-          "size": 3288,
-          "crc32": "5b9d359b",
-          "md5": "b84cfd1798c689206cf490f22fb9fd82",
-          "default": true
-        }
-      ],
-      "display": {
-        "version": "4.3.2",
-        "file": "models/logicwood/display/logicwood-display-4.3.2.bin",
-        "size": 2603840,
-        "crc32": "2df385d3",
-        "md5": "2b848bf4c0aa6a697203e4733843cd20"
-      },
-      "mainboard": {
-        "version": "0.6.2",
-        "file": "models/logicwood/mainboard/logicwood-mainboard-0.6.2.bin",
-        "size": 1218560,
-        "crc32": "5a40d0d8",
-        "md5": "4b5b719f47ed59cd3e82dd178d2f0736"
-      }
-    },
-    "Denver F2": {
-      "slug": "denver-f2",
-      "bootloaders": {
-        "display": "esp32-dio-80m",
-        "mainboard": "esp32s3-dio-80m"
-      },
-      "configs": [
-        {
-          "name": "Standard",
-          "file": "models/denver-f2/config/denver-f2-config-standard.json",
-          "size": 3056,
-          "crc32": "15aa21de",
-          "md5": "f396bd191a6bca1f65a12fa09ad4bf5f",
-          "default": true
-        }
-      ],
-      "display": {
-        "version": "4.1.1",
-        "file": "models/denver-f2/display/denver-f2-display-4.1.1.bin",
-        "size": 2406416,
-        "crc32": "54c080b9",
-        "md5": "971e52a232ac70bf4ab962dedaf90ee3"
-      },
-      "mainboard": {
-        "version": "0.4.1",
-        "file": "models/denver-f2/mainboard/denver-f2-mainboard-0.4.1.bin",
-        "size": 1212576,
-        "crc32": "3e2eb022",
-        "md5": "c07fee0ed2d195b1ca42ac7733f48e53"
-      }
-    },
-    "Hybrid mist": {
-      "slug": "hybrid-mist",
-      "bootloaders": {
-        "display": "esp32-dio-80m",
-        "mainboard": "esp32s3-dio-80m"
-      },
-      "configs": [
-        {
-          "name": "Standard",
-          "file": "models/hybrid-mist/config/hybrid-mist-config-standard.json",
-          "size": 2815,
-          "crc32": "a6be746b",
-          "md5": "c90457de76f495a275674d30dffb9a1d",
-          "default": true
-        }
-      ],
-      "display": {
-        "version": "4.1.1",
-        "file": "models/hybrid-mist/display/hybrid-mist-display-4.1.1.bin",
-        "size": 2430064,
-        "crc32": "f23c109e",
-        "md5": "ec4010a7ddaa2fd5fdfd188c4e369182"
-      },
-      "mainboard": {
-        "version": "0.4.1",
-        "file": "models/hybrid-mist/mainboard/hybrid-mist-mainboard-0.4.1.bin",
-        "size": 1328016,
-        "crc32": "12e4787b",
-        "md5": "8a52b2b23baf3ace35797e2c1d36ab36"
       }
     }
   }
