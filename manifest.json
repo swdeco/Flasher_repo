@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-10",
+  "updated": "2026-10-12",
   "boot": {
     "esp32-dio-40m": {
       "file": "boot/esp32-bootloader-dio-40m-8MB.bin",
@@ -124,35 +124,35 @@
       },
       "configs": [
         {
-          "name": "Standard",
-          "file": "models/rais-cvnq/config/rais-cvnq-config-standard.json",
-          "size": 2873,
-          "crc32": "07271f0f",
-          "md5": "61af9a187c4cbd47be771c3bed88ebc5",
-          "default": true
-        },
-        {
           "name": "Swiss (CH) - reduced output",
           "file": "models/rais-cvnq/config/rais-cvnq-config-swiss-ch-reduced-output.json",
           "size": 2876,
           "crc32": "a357b521",
           "md5": "d513acae775a0d505d057cc1a4d4b0da"
+        },
+        {
+          "name": "CVNQ standard 2026-10-12",
+          "file": "models/rais-cvnq/config/rais-cvnq-config-cvnq-standard-2026-10-12.json",
+          "size": 2878,
+          "crc32": "82cb37a9",
+          "md5": "ff62966b0e79f2323e7655407d0622d2",
+          "default": true
         }
       ],
       "note": "Mainboard firmware drives the bio relay on GPIO19. Do NOT use on 'old Rais' mainboards (relay on GPIO21).",
       "display": {
-        "version": "4.1.1",
-        "file": "models/rais-cvnq/display/rais-cvnq-display-4.1.1.bin",
-        "size": 2265648,
-        "crc32": "27f45dcf",
-        "md5": "b5ae01bc6a1a5526253876c5ee1f2907"
+        "version": "4.1.2",
+        "file": "models/rais-cvnq/display/rais-cvnq-display-4.1.2.bin",
+        "size": 2265008,
+        "crc32": "6411d0c6",
+        "md5": "a91807dd5dac9c462bcf57460cafba3b"
       },
       "mainboard": {
-        "version": "0.4.1",
-        "file": "models/rais-cvnq/mainboard/rais-cvnq-mainboard-0.4.1.bin",
-        "size": 1213744,
-        "crc32": "fec9ee05",
-        "md5": "ea8fd764618c0df811af3b0c6ea71017"
+        "version": "0.4.2",
+        "file": "models/rais-cvnq/mainboard/rais-cvnq-mainboard-0.4.2.bin",
+        "size": 1214816,
+        "crc32": "a9a27b93",
+        "md5": "e296f8bc58fad3092e287bf4e170a24a"
       }
     }
   }
