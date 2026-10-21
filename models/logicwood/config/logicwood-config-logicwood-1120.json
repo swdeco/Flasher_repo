@@ -120,6 +120,11 @@
       "Kp": 380,
       "Ki": 8,
       "Kd": 4500
+    },
+    "aggressive": {
+      "Kp": 380,
+      "Ki": 8,
+      "Kd": 4500
     }
   },
   "autotune": {
@@ -136,5 +141,9 @@
   },
   "fuelPumpTimer": {
     "emptyTime": 60000
-  }
+  },
+  "lFuelValue_5": "20.0",
+  "softwareREV": "1.0",
+  "runHours": "0",
+  "externTankSpeed": "50"
 }

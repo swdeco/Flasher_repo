@@ -42,19 +42,12 @@
       },
       "configs": [
         {
-          "name": "Base (firmware default)",
-          "file": "models/logicwood/config/logicwood-config-base-firmware-default.json",
-          "size": 3288,
-          "crc32": "5b9d359b",
-          "md5": "b84cfd1798c689206cf490f22fb9fd82",
-          "default": true
-        },
-        {
           "name": "Logicwood 510",
           "file": "models/logicwood/config/logicwood-config-logicwood-510.json",
-          "size": 3216,
-          "crc32": "abf659c5",
-          "md5": "b3e3eb58f5eac926ca1f46243e588dd7"
+          "size": 3388,
+          "crc32": "16e6ff7b",
+          "md5": "048a7bd410ea287efe9dbc1fc36466e6",
+          "default": true
         },
         {
           "name": "Logicwood 720",
@@ -73,9 +66,9 @@
         {
           "name": "Logicwood 1120",
           "file": "models/logicwood/config/logicwood-config-logicwood-1120.json",
-          "size": 3209,
-          "crc32": "c7f6334b",
-          "md5": "cde999531cb48047f8c300237ecbd74d"
+          "size": 3381,
+          "crc32": "ae56e8f1",
+          "md5": "d4f66b9be7ef7c7cebbac18c9cbb11d5"
         }
       ],
       "display": {

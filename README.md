@@ -14,7 +14,7 @@ The phone app's OTA updates use the separate `swdeco/firmwares` repo - nothing h
 
 | Model (exact `fireplaceModel`) | Display | Mainboard | config.json templates |
 |---|---|---|---|
-| Logicwood | 80 MHz bootloader | S3 | `Base (firmware default)` (default) |
+| Logicwood | 80 MHz bootloader | S3 | `Logicwood 510` (default = base), `Logicwood 720`, `Logicwood 920`, `Logicwood 1120` |
 | Denver F2 | 80 MHz bootloader | S3 | `Base (firmware default)` (default) |
 | Rais Visio | 40 MHz bootloader | S3 | `visio 4-9-2026` (default), `Base (firmware default)` |
 | Rais CVNQ | 40 MHz bootloader | S3 | `CVNQ standard 2026-10-12` (default), `Swiss (CH) - reduced output`, `Base (firmware default)` |
@@ -25,6 +25,18 @@ builds in (`DEFAULT_CONFIG_JSON`) - what a board falls back to if its config is 
 display copy is used because the display holds the master config (with `fireplaceModel`)
 and pushes it to the mainboard on every save. When a repo's `data/config.json` changes,
 publish it as a NEW config name (published files never change), e.g. `Base 2026-11`.
+
+**Logicwood per length** (the number = fireplace length in mm): built from the service team's
+files with heating window 60-120 °C, call service (`evapMaxTemp`) 125 °C, the standard LED
+setup (heartbeat 4 charcoal, fade speed 50 ms), placeholder serial `123456` and zeroed
+counters; 510 uses the landscape layout, the others portrait. `Logicwood 510` is the
+Logicwood base, so Logicwood has no separate `Base (firmware default)` entry any more (its
+file stays for cached copies). The display AND burner firmware's built-in default (used if a
+board's config is lost) = the 510 with portrait layout and smart home off - from the NEXT
+published Logicwood firmware (the published 4.3.2 / 0.6.2 bins still have the old default).
+
+The tool shows the config list EMPTY after choosing a model - the technician must pick the
+config (length) before anything is written. The `default` flag only marks the base config.
 
 The model order in the tool = the order in manifest.json (`release.py order ...`).
 When the tool writes a config it always keeps the board's Bluetooth code (`serialNumber`),
