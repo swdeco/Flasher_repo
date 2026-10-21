@@ -14,10 +14,17 @@ The phone app's OTA updates use the separate `swdeco/firmwares` repo - nothing h
 
 | Model (exact `fireplaceModel`) | Display | Mainboard | config.json templates |
 |---|---|---|---|
-| Logicwood | 80 MHz bootloader | S3 | - (firmware only for now) |
-| Denver F2 | 80 MHz bootloader | S3 | - (firmware only for now) |
-| Rais Visio | 40 MHz bootloader | S3 | `visio 4-9-2026` (default), `Standard 2026-09-06` |
-| Rais CVNQ | 40 MHz bootloader | S3 | `Standard` (default), `Swiss (CH) - reduced output` |
+| Logicwood | 80 MHz bootloader | S3 | `Base (firmware default)` (default) |
+| Denver F2 | 80 MHz bootloader | S3 | `Base (firmware default)` (default) |
+| Rais Visio | 40 MHz bootloader | S3 | `visio 4-9-2026` (default), `Base (firmware default)` |
+| Rais CVNQ | 40 MHz bootloader | S3 | `CVNQ standard 2026-10-12` (default), `Swiss (CH) - reduced output`, `Base (firmware default)` |
+
+**Base (firmware default)** = the display repo's `data/config.json` (`LogicWood_display`,
+`Display_F2`, `Visio_Display`, `Rais-display`), byte-identical to the default the firmware
+builds in (`DEFAULT_CONFIG_JSON`) - what a board falls back to if its config is lost. The
+display copy is used because the display holds the master config (with `fireplaceModel`)
+and pushes it to the mainboard on every save. When a repo's `data/config.json` changes,
+publish it as a NEW config name (published files never change), e.g. `Base 2026-11`.
 
 The model order in the tool = the order in manifest.json (`release.py order ...`).
 When the tool writes a config it always keeps the board's Bluetooth code (`serialNumber`),
