@@ -17,7 +17,7 @@ The phone app's OTA updates use the separate `swdeco/firmwares` repo - nothing h
 | Logicwood | 80 MHz bootloader | S3 | `Logicwood 510` (default = base), `Logicwood 720`, `Logicwood 920`, `Logicwood 1120` |
 | Denver F2 | 80 MHz bootloader | S3 | `Base (firmware default)` (default) |
 | Rais Visio | 40 MHz bootloader | S3 | `visio 4-9-2026` (default), `Base (firmware default)` |
-| Rais CVNQ | 40 MHz bootloader | S3 | `CVNQ standard 2026-10-12` (default), `Swiss (CH) - reduced output`, `Base (firmware default)` |
+| Rais CVNQ | 40 MHz bootloader | S3 | `CVNQ` (default), `Swiss (CH) - reduced output`, `Base (firmware default)` |
 
 **Base (firmware default)** = the display repo's `data/config.json` (`LogicWood_display`,
 `Display_F2`, `Visio_Display`, `Rais-display`), byte-identical to the default the firmware
@@ -34,6 +34,10 @@ Logicwood base, so Logicwood has no separate `Base (firmware default)` entry any
 file stays for cached copies). The display AND burner firmware's built-in default (used if a
 board's config is lost) = the 510 with portrait layout and smart home off - from the NEXT
 published Logicwood firmware (the published 4.3.2 / 0.6.2 bins still have the old default).
+
+**Rais CVNQ:** `CVNQ` = the service team's `CVNQ.json` (2026-10-21) as-is, only
+`"fireplaceModel": "Rais CVNQ"` added so the app/OTA knows the model; `Swiss (CH) - reduced
+output` = their `CVNQ SWISS.json` byte for byte.
 
 The tool shows the config list EMPTY after choosing a model - the technician must pick the
 config (length) before anything is written. The `default` flag only marks the base config.

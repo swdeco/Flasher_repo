@@ -163,19 +163,19 @@
       },
       "configs": [
         {
+          "name": "CVNQ",
+          "file": "models/rais-cvnq/config/rais-cvnq-config-cvnq.json",
+          "size": 2877,
+          "crc32": "c8d3d3bd",
+          "md5": "b9b99b35f4ecfb4ea4891629a0aaa762",
+          "default": true
+        },
+        {
           "name": "Swiss (CH) - reduced output",
           "file": "models/rais-cvnq/config/rais-cvnq-config-swiss-ch-reduced-output.json",
           "size": 2876,
           "crc32": "a357b521",
           "md5": "d513acae775a0d505d057cc1a4d4b0da"
-        },
-        {
-          "name": "CVNQ standard 2026-10-12",
-          "file": "models/rais-cvnq/config/rais-cvnq-config-cvnq-standard-2026-10-12.json",
-          "size": 2878,
-          "crc32": "82cb37a9",
-          "md5": "ff62966b0e79f2323e7655407d0622d2",
-          "default": true
         },
         {
           "name": "Base (firmware default)",
