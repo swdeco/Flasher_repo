@@ -125,11 +125,11 @@
       },
       "configs": [
         {
-          "name": "visio 4-9-2026",
-          "file": "models/rais-visio/config/rais-visio-config-visio-4-9-2026.json",
-          "size": 3187,
-          "crc32": "b0b067ea",
-          "md5": "5252deb7bb37230bd5adefb7614bb9dd",
+          "name": "Visio",
+          "file": "models/rais-visio/config/rais-visio-config-visio.json",
+          "size": 2474,
+          "crc32": "f85662fb",
+          "md5": "4e021153039cd1faf72b6ffd23d28497",
           "default": true
         },
         {
