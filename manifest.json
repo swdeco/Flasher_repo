@@ -127,9 +127,9 @@
         {
           "name": "Visio",
           "file": "models/rais-visio/config/rais-visio-config-visio.json",
-          "size": 2474,
-          "crc32": "f85662fb",
-          "md5": "4e021153039cd1faf72b6ffd23d28497",
+          "size": 2475,
+          "crc32": "19f00b77",
+          "md5": "cfc1f7be265224fd367c8082a6bbfc6f",
           "default": true
         },
         {

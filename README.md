@@ -35,8 +35,10 @@ file stays for cached copies). The display AND burner firmware's built-in defaul
 board's config is lost) = the 510 with portrait layout and smart home off - from the NEXT
 published Logicwood firmware (the published 4.3.2 / 0.6.2 bins still have the old default).
 
-**Rais Visio:** `Visio` = the service team's `Visio.json` (2026-10-22) byte for byte (same
-settings as the old `visio 4-9-2026`, minus keys the Visio firmware never reads).
+**Rais Visio:** `Visio` = the service team's `Visio.json` (2026-10-22) with one change
+(2026-10-23): heater-2 / arm heating max `evapHeating2MaxTemp` 95 -> 110 °C, matching the arm's
+fixed 110 °C Call Service limit in burner 0.4.9. Otherwise the same settings as the old
+`visio 4-9-2026`, minus keys the Visio firmware never reads.
 
 **Rais CVNQ:** `CVNQ` = the service team's `CVNQ.json` (2026-10-21) as-is, only
 `"fireplaceModel": "Rais CVNQ"` added so the app/OTA knows the model; `Swiss (CH) - reduced

@@ -55,7 +55,7 @@
   "evapHeatingMinTemp": "60",
   "evapHeatingMaxTemp": "96",
   "evapHeating2MinTemp": "60",
-  "evapHeating2MaxTemp": "95",
+  "evapHeating2MaxTemp": "110",
   "bioStartTempSwitchC": "50",
   "bioStartOutBelow60": "5990",
   "bioStartOutAt60Plus": "2267",
