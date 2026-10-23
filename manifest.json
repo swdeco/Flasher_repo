@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "boot": {
     "esp32-dio-40m": {
       "file": "boot/esp32-bootloader-dio-40m-8MB.bin",
@@ -141,18 +141,18 @@
         }
       ],
       "display": {
-        "version": "4.1.7",
-        "file": "models/rais-visio/display/rais-visio-display-4.1.7.bin",
-        "size": 2290864,
-        "crc32": "d0910c4b",
-        "md5": "5550c91b2747090f998e5b3c763bec03"
+        "version": "4.1.8",
+        "file": "models/rais-visio/display/rais-visio-display-4.1.8.bin",
+        "size": 2293136,
+        "crc32": "13df1db5",
+        "md5": "0a7cd1f41d76a6109186dedf4f28f592"
       },
       "mainboard": {
-        "version": "0.4.8",
-        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.8.bin",
-        "size": 1220496,
-        "crc32": "ada54841",
-        "md5": "0fc422a65d99670aababc4eb8e2165fd"
+        "version": "0.4.9",
+        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.9.bin",
+        "size": 1220528,
+        "crc32": "49ef194a",
+        "md5": "dd56f22e92d361e60fd40ea070a610c3"
       }
     },
     "Rais CVNQ": {
