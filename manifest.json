@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "boot": {
     "esp32-dio-40m": {
       "file": "boot/esp32-bootloader-dio-40m-8MB.bin",
@@ -143,11 +143,11 @@
         }
       ],
       "display": {
-        "version": "4.1.9",
-        "file": "models/rais-visio/display/rais-visio-display-4.1.9.bin",
-        "size": 2300272,
-        "crc32": "6cf56774",
-        "md5": "e76b13a53df2d41ffc9907bd2d006953"
+        "version": "4.1.10",
+        "file": "models/rais-visio/display/rais-visio-display-4.1.10.bin",
+        "size": 2301008,
+        "crc32": "3ab3f552",
+        "md5": "73847cf9065a37e0fd4d19b098f8f734"
       },
       "mainboard": {
         "version": "0.4.9",
