@@ -14,8 +14,8 @@ The phone app's OTA updates use the separate `swdeco/firmwares` repo - nothing h
 
 | Model (exact `fireplaceModel`) | Display | Mainboard | config.json templates |
 |---|---|---|---|
-| Logicwood | 80 MHz bootloader | S3 | `Logicwood 510` (default = base), `Logicwood 720`, `Logicwood 920`, `Logicwood 1120` |
-| Denver F2 | 80 MHz bootloader | S3 | `Base (firmware default)` (default) |
+| Logicwood | 80 MHz bootloader | S3 | `Logicwood 510` (default = base), `Logicwood 540`, `Logicwood 720`, `Logicwood 920`, `Logicwood 1120`, `Logicwood 1520` |
+| Denver F2 | 80 MHz bootloader | S3 | `Denver F2 520`, `720`, `920`, `1020`, `1120`, `1320`, `1520`, `1920`, `Base (firmware default)` (default) |
 | Rais Visio | 40 MHz bootloader | S3 | `Visio` (default), `Base (firmware default)` |
 | Rais CVNQ | 40 MHz bootloader | S3 | `CVNQ` (default), `Swiss (CH) - reduced output`, `Base (firmware default)` |
 
@@ -27,22 +27,30 @@ and pushes it to the mainboard on every save. When a repo's `data/config.json` c
 publish it as a NEW config name (published files never change), e.g. `Base 2026-11`.
 
 **Logicwood per length** (the number = fireplace length in mm): built from the service team's
-files with heating window 60-120 °C, call service (`evapMaxTemp`) 125 °C, the standard LED
-setup (heartbeat 4 charcoal, fade speed 50 ms), placeholder serial `123456` and zeroed
-counters; 510 uses the landscape layout, the others portrait. `Logicwood 510` is the
+files (updated 2026-11-03 from "de nye jason til alle pejse") with heating window 60-120 °C,
+call service (`evapMaxTemp`) 125 °C, the standard LED setup (heartbeat 4 charcoal, fade speed
+50 ms), placeholder serial `1234`, zeroed counters and the name `Logic Wood <length>`; 510 and
+540 use the landscape layout, the others portrait; 1520 has the AC igniter. `Logicwood 510` is the
 Logicwood base, so Logicwood has no separate `Base (firmware default)` entry any more (its
 file stays for cached copies). The display AND burner firmware's built-in default (used if a
 board's config is lost) = the 510 with portrait layout and smart home off - from the NEXT
 published Logicwood firmware (the published 4.3.2 / 0.6.2 bins still have the old default).
 
+**Denver F2 per length** (2026-11-03): the service team's `F6 <length>.json` files (5 levels +
+ECO, `levelConfiguration` `ECO` - also the 520, which was an F2 file; its internal name stays
+`DBF2 520`) with heating window 65-125 °C, call service (`evapMaxTemp`) 125 °C, placeholder
+serial `1234`, zeroed counters; keys missing from the files are filled from the Denver F2 base.
+1920 uses the landscape layout like the others. No `F1_T`..`F6_T` in the files, so the burner's
+built-in level targets (70/75/80/85/88 °C) apply.
+
 **Rais Visio:** `Visio` = the service team's `Visio.json` (2026-10-22) with one change
 (2026-10-23): heater-2 / arm heating max `evapHeating2MaxTemp` 95 -> 110 °C, matching the arm's
 fixed 110 °C Call Service limit in burner 0.4.9. Otherwise the same settings as the old
-`visio 4-9-2026`, minus keys the Visio firmware never reads.
+`visio 4-9-2026`, minus keys the Visio firmware never reads. 2026-11-03: counters zeroed.
 
-**Rais CVNQ:** `CVNQ` = the service team's `CVNQ.json` (2026-10-21) as-is, only
-`"fireplaceModel": "Rais CVNQ"` added so the app/OTA knows the model; `Swiss (CH) - reduced
-output` = their `CVNQ SWISS.json` byte for byte.
+**Rais CVNQ:** `CVNQ` = the service team's `CVNQ.json` (2026-10-21), `"fireplaceModel": "Rais
+CVNQ"` added so the app/OTA knows the model; 2026-11-03: placeholder serial `1234` and zeroed
+counters. `Swiss (CH) - reduced output` = their `CVNQ SWISS.json` byte for byte.
 
 The tool shows the config list EMPTY after choosing a model - the technician must pick the
 config (length) before anything is written. The `default` flag only marks the base config.
@@ -70,8 +78,12 @@ tools/release.py   adds files to manifest.json (with checks)
 
 ## Golden rules
 
-1. **Never overwrite or edit a published file.** Always add a new version. The tool caches
-   by file name and checks every download against the manifest checksums.
+1. **Never overwrite or edit a published firmware or boot file.** Always add a new version. The
+   tool caches by file name and checks every download against the manifest checksums.
+   Config templates are the exception: an updated template may keep its name (delete the old
+   file, then `release.py config` with the same name - it keeps the default flag). A cached copy
+   with an old checksum is downloaded again. Wait ~5 minutes after a push before telling
+   technicians (the plain download address can be cached that long).
 2. **Never edit manifest.json by hand** - use `tools/release.py`, then `release.py check`.
 3. **Keep `.gitattributes` (`* -text`).** Git on Windows (`core.autocrlf=true`) would
    otherwise change line endings in the config files on commit, and the tool would reject

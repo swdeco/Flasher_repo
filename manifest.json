@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-30",
+  "updated": "2026-11-03",
   "boot": {
     "esp32-dio-40m": {
       "file": "boot/esp32-bootloader-dio-40m-8MB.bin",
@@ -44,31 +44,45 @@
         {
           "name": "Logicwood 510",
           "file": "models/logicwood/config/logicwood-config-logicwood-510.json",
-          "size": 3388,
-          "crc32": "16e6ff7b",
-          "md5": "048a7bd410ea287efe9dbc1fc36466e6",
+          "size": 3386,
+          "crc32": "f1b2bb48",
+          "md5": "3573583c8a454717d578f619c263d7eb",
           "default": true
+        },
+        {
+          "name": "Logicwood 540",
+          "file": "models/logicwood/config/logicwood-config-logicwood-540.json",
+          "size": 3387,
+          "crc32": "21c9431f",
+          "md5": "9b105f97621a3e68670d9f6c552844e3"
         },
         {
           "name": "Logicwood 720",
           "file": "models/logicwood/config/logicwood-config-logicwood-720.json",
-          "size": 3380,
-          "crc32": "011b069c",
-          "md5": "7f05fd5426f2731135a4a4b29ee33889"
+          "size": 3383,
+          "crc32": "ab94c83d",
+          "md5": "093b688b83e582234aa8dec485d5f1fe"
         },
         {
           "name": "Logicwood 920",
           "file": "models/logicwood/config/logicwood-config-logicwood-920.json",
-          "size": 3379,
-          "crc32": "8fe449c3",
-          "md5": "a08bbbc7b84ecf158b5a09d6a50fdb8d"
+          "size": 3383,
+          "crc32": "5f2317ba",
+          "md5": "57cd4a4350ea8f13582003d231f288e9"
         },
         {
           "name": "Logicwood 1120",
           "file": "models/logicwood/config/logicwood-config-logicwood-1120.json",
-          "size": 3381,
-          "crc32": "ae56e8f1",
-          "md5": "d4f66b9be7ef7c7cebbac18c9cbb11d5"
+          "size": 3385,
+          "crc32": "bc3ddde3",
+          "md5": "c8f8f29ff5389e11f443f035e2d9154a"
+        },
+        {
+          "name": "Logicwood 1520",
+          "file": "models/logicwood/config/logicwood-config-logicwood-1520.json",
+          "size": 3387,
+          "crc32": "903dda91",
+          "md5": "bbfeb69f6866e122121e13a996170dc7"
         }
       ],
       "display": {
@@ -94,6 +108,62 @@
         "mainboard": "esp32s3-dio-80m"
       },
       "configs": [
+        {
+          "name": "Denver F2 520",
+          "file": "models/denver-f2/config/denver-f2-config-denver-f2-520.json",
+          "size": 3146,
+          "crc32": "a0a51d2e",
+          "md5": "6cacedb90a80a294805c5d3f708759f1"
+        },
+        {
+          "name": "Denver F2 720",
+          "file": "models/denver-f2/config/denver-f2-config-denver-f2-720.json",
+          "size": 3146,
+          "crc32": "dfc6f6a1",
+          "md5": "3cdf63a2b2d65094b54ce643ca9e2c48"
+        },
+        {
+          "name": "Denver F2 920",
+          "file": "models/denver-f2/config/denver-f2-config-denver-f2-920.json",
+          "size": 3146,
+          "crc32": "6fc9af35",
+          "md5": "ca0dd563b7a3f845d014266d2f18dcaa"
+        },
+        {
+          "name": "Denver F2 1020",
+          "file": "models/denver-f2/config/denver-f2-config-denver-f2-1020.json",
+          "size": 3149,
+          "crc32": "237fd432",
+          "md5": "5cd327ad3c5c666968c0fa51d9dd731e"
+        },
+        {
+          "name": "Denver F2 1120",
+          "file": "models/denver-f2/config/denver-f2-config-denver-f2-1120.json",
+          "size": 3147,
+          "crc32": "69b2e066",
+          "md5": "7261acc98ade9335ca423f710f661a5e"
+        },
+        {
+          "name": "Denver F2 1320",
+          "file": "models/denver-f2/config/denver-f2-config-denver-f2-1320.json",
+          "size": 3150,
+          "crc32": "dee82abb",
+          "md5": "d69d6bd25c2fba0816a8f381a2a7515c"
+        },
+        {
+          "name": "Denver F2 1520",
+          "file": "models/denver-f2/config/denver-f2-config-denver-f2-1520.json",
+          "size": 3148,
+          "crc32": "80e73942",
+          "md5": "919389275749aceecf2236eaa7cf35e1"
+        },
+        {
+          "name": "Denver F2 1920",
+          "file": "models/denver-f2/config/denver-f2-config-denver-f2-1920.json",
+          "size": 3149,
+          "crc32": "2de02a38",
+          "md5": "6abadfddbb964d268de4632aee3696c5"
+        },
         {
           "name": "Base (firmware default)",
           "file": "models/denver-f2/config/denver-f2-config-base-firmware-default.json",
@@ -129,9 +199,9 @@
         {
           "name": "Visio",
           "file": "models/rais-visio/config/rais-visio-config-visio.json",
-          "size": 2475,
-          "crc32": "19f00b77",
-          "md5": "cfc1f7be265224fd367c8082a6bbfc6f",
+          "size": 2476,
+          "crc32": "9eeea4e5",
+          "md5": "d8458e63c4ab4d85bf7ed7c84ac7d256",
           "default": true
         },
         {
@@ -167,9 +237,9 @@
         {
           "name": "CVNQ",
           "file": "models/rais-cvnq/config/rais-cvnq-config-cvnq.json",
-          "size": 2877,
-          "crc32": "c8d3d3bd",
-          "md5": "b9b99b35f4ecfb4ea4891629a0aaa762",
+          "size": 2876,
+          "crc32": "83a0609a",
+          "md5": "1ee6240759218774bf4bf963628f677c",
           "default": true
         },
         {
