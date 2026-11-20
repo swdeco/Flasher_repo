@@ -220,11 +220,11 @@
         "md5": "73847cf9065a37e0fd4d19b098f8f734"
       },
       "mainboard": {
-        "version": "0.4.19",
-        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.19.bin",
-        "size": 1227152,
-        "crc32": "cdea2878",
-        "md5": "89b9aa48ec844f3bb49e24ee0e952a65"
+        "version": "0.4.20",
+        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.20.bin",
+        "size": 1227168,
+        "crc32": "ef3b70ef",
+        "md5": "368f5e11a7b398f1e6976bb15c577175"
       }
     },
     "Rais CVNQ": {
@@ -259,18 +259,18 @@
       ],
       "note": "Mainboard firmware drives the bio relay on GPIO19. Do NOT use on 'old Rais' mainboards (relay on GPIO21).",
       "display": {
-        "version": "4.1.5",
-        "file": "models/rais-cvnq/display/rais-cvnq-display-4.1.5.bin",
-        "size": 2278320,
-        "crc32": "9a4e7d34",
-        "md5": "556c8a27b5614d175889fce0380adce6"
+        "version": "4.1.6",
+        "file": "models/rais-cvnq/display/rais-cvnq-display-4.1.6.bin",
+        "size": 2288576,
+        "crc32": "16ba972a",
+        "md5": "93f359619f2d7d06fbf8f3194b7bfadb"
       },
       "mainboard": {
-        "version": "0.4.7",
-        "file": "models/rais-cvnq/mainboard/rais-cvnq-mainboard-0.4.7.bin",
-        "size": 1222464,
-        "crc32": "fd4f5158",
-        "md5": "3e6453524be79717db1eba82a822a6c9"
+        "version": "0.4.8",
+        "file": "models/rais-cvnq/mainboard/rais-cvnq-mainboard-0.4.8.bin",
+        "size": 1223504,
+        "crc32": "7868ea06",
+        "md5": "4b9331dd10723274000fbe285de0c5e2"
       }
     }
   }
