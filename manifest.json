@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "boot": {
     "esp32-dio-40m": {
       "file": "boot/esp32-bootloader-dio-40m-8MB.bin",
@@ -220,11 +220,11 @@
         "md5": "73847cf9065a37e0fd4d19b098f8f734"
       },
       "mainboard": {
-        "version": "0.4.14",
-        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.14.bin",
-        "size": 1222784,
-        "crc32": "75021e61",
-        "md5": "44abb09b8c5ba1f57bb61e1b688bfbef"
+        "version": "0.4.19",
+        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.19.bin",
+        "size": 1227152,
+        "crc32": "cdea2878",
+        "md5": "89b9aa48ec844f3bb49e24ee0e952a65"
       }
     },
     "Rais CVNQ": {
@@ -237,40 +237,40 @@
         {
           "name": "CVNQ",
           "file": "models/rais-cvnq/config/rais-cvnq-config-cvnq.json",
-          "size": 2876,
-          "crc32": "83a0609a",
-          "md5": "1ee6240759218774bf4bf963628f677c",
+          "size": 2878,
+          "crc32": "30a45558",
+          "md5": "b51fe60868acffa14eebdefc341d86b4",
           "default": true
         },
         {
           "name": "Swiss (CH) - reduced output",
           "file": "models/rais-cvnq/config/rais-cvnq-config-swiss-ch-reduced-output.json",
-          "size": 2876,
-          "crc32": "a357b521",
-          "md5": "d513acae775a0d505d057cc1a4d4b0da"
+          "size": 2878,
+          "crc32": "e7ed91ce",
+          "md5": "0b1a5ebeb5345569256e439dc903769d"
         },
         {
           "name": "Base (firmware default)",
           "file": "models/rais-cvnq/config/rais-cvnq-config-base-firmware-default.json",
-          "size": 2873,
-          "crc32": "07271f0f",
-          "md5": "61af9a187c4cbd47be771c3bed88ebc5"
+          "size": 2875,
+          "crc32": "71a3a3f7",
+          "md5": "ac02938af2772abe029b79a58e611460"
         }
       ],
       "note": "Mainboard firmware drives the bio relay on GPIO19. Do NOT use on 'old Rais' mainboards (relay on GPIO21).",
       "display": {
-        "version": "4.1.4",
-        "file": "models/rais-cvnq/display/rais-cvnq-display-4.1.4.bin",
-        "size": 2273504,
-        "crc32": "1ca1bca1",
-        "md5": "4d9d1234dd47f08d9469870ebb75670c"
+        "version": "4.1.5",
+        "file": "models/rais-cvnq/display/rais-cvnq-display-4.1.5.bin",
+        "size": 2278320,
+        "crc32": "9a4e7d34",
+        "md5": "556c8a27b5614d175889fce0380adce6"
       },
       "mainboard": {
-        "version": "0.4.6",
-        "file": "models/rais-cvnq/mainboard/rais-cvnq-mainboard-0.4.6.bin",
-        "size": 1218784,
-        "crc32": "99006fa8",
-        "md5": "b7b7d4b1b2a3d72b5aa99f2522da4179"
+        "version": "0.4.7",
+        "file": "models/rais-cvnq/mainboard/rais-cvnq-mainboard-0.4.7.bin",
+        "size": 1222464,
+        "crc32": "fd4f5158",
+        "md5": "3e6453524be79717db1eba82a822a6c9"
       }
     }
   }
