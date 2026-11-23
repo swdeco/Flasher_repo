@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-21",
+  "updated": "2026-11-23",
   "boot": {
     "esp32-dio-40m": {
       "file": "boot/esp32-bootloader-dio-40m-8MB.bin",
@@ -197,34 +197,34 @@
       },
       "configs": [
         {
-          "name": "Visio",
-          "file": "models/rais-visio/config/rais-visio-config-visio.json",
-          "size": 2476,
-          "crc32": "9eeea4e5",
-          "md5": "d8458e63c4ab4d85bf7ed7c84ac7d256",
-          "default": true
-        },
-        {
           "name": "Base (firmware default)",
           "file": "models/rais-visio/config/rais-visio-config-base-firmware-default.json",
           "size": 2466,
           "crc32": "096ffb09",
           "md5": "6ef53a3e3602483cd12dbfe5f1cf5214"
+        },
+        {
+          "name": "Visio 2026-11-23",
+          "file": "models/rais-visio/config/rais-visio-config-visio-2026-11-23.json",
+          "size": 2476,
+          "crc32": "41761f4c",
+          "md5": "ecd1f5d80b9eb5ce7d1d1837d0fee8a6",
+          "default": true
         }
       ],
       "display": {
-        "version": "4.1.10",
-        "file": "models/rais-visio/display/rais-visio-display-4.1.10.bin",
-        "size": 2301008,
-        "crc32": "3ab3f552",
-        "md5": "73847cf9065a37e0fd4d19b098f8f734"
+        "version": "4.1.12",
+        "file": "models/rais-visio/display/rais-visio-display-4.1.12.bin",
+        "size": 2302960,
+        "crc32": "3441ddc6",
+        "md5": "7afbc76e227a32ec3b273652fa697284"
       },
       "mainboard": {
-        "version": "0.4.20",
-        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.20.bin",
-        "size": 1227168,
-        "crc32": "ef3b70ef",
-        "md5": "368f5e11a7b398f1e6976bb15c577175"
+        "version": "0.4.22",
+        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.22.bin",
+        "size": 1228736,
+        "crc32": "55f476a7",
+        "md5": "41a7fef7242ca8c032c8853bc94cceff"
       }
     },
     "Rais CVNQ": {
