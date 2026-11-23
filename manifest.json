@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "boot": {
     "esp32-dio-40m": {
       "file": "boot/esp32-bootloader-dio-40m-8MB.bin",
@@ -259,18 +259,18 @@
       ],
       "note": "Mainboard firmware drives the bio relay on GPIO19. Do NOT use on 'old Rais' mainboards (relay on GPIO21).",
       "display": {
-        "version": "4.1.6",
-        "file": "models/rais-cvnq/display/rais-cvnq-display-4.1.6.bin",
-        "size": 2288576,
-        "crc32": "16ba972a",
-        "md5": "93f359619f2d7d06fbf8f3194b7bfadb"
+        "version": "4.1.7",
+        "file": "models/rais-cvnq/display/rais-cvnq-display-4.1.7.bin",
+        "size": 2287216,
+        "crc32": "74c6241c",
+        "md5": "16cfa31c853bd459d8a944bee6617114"
       },
       "mainboard": {
-        "version": "0.4.8",
-        "file": "models/rais-cvnq/mainboard/rais-cvnq-mainboard-0.4.8.bin",
-        "size": 1223504,
-        "crc32": "7868ea06",
-        "md5": "4b9331dd10723274000fbe285de0c5e2"
+        "version": "0.4.9",
+        "file": "models/rais-cvnq/mainboard/rais-cvnq-mainboard-0.4.9.bin",
+        "size": 1228608,
+        "crc32": "625434a4",
+        "md5": "45f7e30c81534831520a12f95323325b"
       }
     }
   }
