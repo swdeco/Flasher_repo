@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "boot": {
     "esp32-dio-40m": {
       "file": "boot/esp32-bootloader-dio-40m-8MB.bin",
@@ -204,27 +204,27 @@
           "md5": "6ef53a3e3602483cd12dbfe5f1cf5214"
         },
         {
-          "name": "Visio 2026-11-23",
-          "file": "models/rais-visio/config/rais-visio-config-visio-2026-11-23.json",
-          "size": 2476,
-          "crc32": "41761f4c",
-          "md5": "ecd1f5d80b9eb5ce7d1d1837d0fee8a6",
+          "name": "Visio 2026-11-24",
+          "file": "models/rais-visio/config/rais-visio-config-visio-2026-11-24.json",
+          "size": 2627,
+          "crc32": "1dfe7482",
+          "md5": "3206cb64f213465f0d52740619160252",
           "default": true
         }
       ],
       "display": {
-        "version": "4.1.12",
-        "file": "models/rais-visio/display/rais-visio-display-4.1.12.bin",
-        "size": 2302960,
-        "crc32": "3441ddc6",
-        "md5": "7afbc76e227a32ec3b273652fa697284"
+        "version": "4.1.13",
+        "file": "models/rais-visio/display/rais-visio-display-4.1.13.bin",
+        "size": 2307424,
+        "crc32": "abdfb463",
+        "md5": "f1547d3cc3880a335b39fd86b541542c"
       },
       "mainboard": {
-        "version": "0.4.22",
-        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.22.bin",
-        "size": 1228736,
-        "crc32": "55f476a7",
-        "md5": "41a7fef7242ca8c032c8853bc94cceff"
+        "version": "0.4.24",
+        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.24.bin",
+        "size": 1230336,
+        "crc32": "d67bca41",
+        "md5": "85b05d31a3a748d96416335bc4ce47a4"
       }
     },
     "Rais CVNQ": {
