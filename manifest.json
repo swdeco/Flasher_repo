@@ -220,11 +220,11 @@
         "md5": "f1547d3cc3880a335b39fd86b541542c"
       },
       "mainboard": {
-        "version": "0.4.24",
-        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.24.bin",
-        "size": 1230336,
-        "crc32": "d67bca41",
-        "md5": "85b05d31a3a748d96416335bc4ce47a4"
+        "version": "0.4.25",
+        "file": "models/rais-visio/mainboard/rais-visio-mainboard-0.4.25.bin",
+        "size": 1230608,
+        "crc32": "52fa26bc",
+        "md5": "fb07e5e56efa87beaddb1d7d6d77a19a"
       }
     },
     "Rais CVNQ": {
